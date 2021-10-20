@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link
+        href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200;400;700&display=swap"
+        rel="stylesheet"
+        />
+        <link rel="stylesheet" href="./index.css" />
+        <title>Pac-man</title>
+    </head>
+    <body>
+        <div class="overlay">
+            <div class="modal">
+                <div class="upper-part">
+                    <h2>Welcome to <span id="pacman-title">Pac-man</span>!</h2>
+                    <p>
+                        This is a minimal pacman game you could play using
+                        <span id="yellow-text">← ↑ → ↓</span> keys or
+                        <span id="yellow-text">WASD</span> keys [for the gamers out there
+                        ;)] <br /><br />
+                        You <span id="lose-text">LOSE</span> the game if you are eaten by
+                        the ghosts when they are not <span id="purple-text">Purple</span>.
+                        <br />
+                        (Tip: Turn the ghosts <span id="purple-text">Purple</span> by eating
+                        <span id="power-pellet-text">Power Pellets</span>) <br /><br />
+                        You <span id="win-text">WIN</span> the game by eating all the
+                        <span id="pacdots-text">Pacdots</span> and
+                        <span id="power-pellet-text">Power Pellets</span>! <br />
+                        <br />
+                        Scoring System:
+                    </p>
+                    <ul>
+                        <li>Eating a <span id="pacdots-text">Pacdot</span> = 1 Point</li>
+                        <li>
+                        Eating a <span id="power-pellet-text">Power Pellet</span> = 10
+                        Points
+                        </li>
+                        <li>Eating a <span id="purple-text">Ghost</span> = 100 Points</li>
+                    </ul>
+                </div>
+                <div class="lower-part">
+                    <input aria-label="player name", id="player-name-text-field", type="text", placeholder="Enter Name Here" required/>
+                    <p id="warning-text">Please enter your Name!</p>
+                    <button class="btn" id="start-game">START GAME</button>
+                </div>
+            </div>
+        </div>
+        <h1>Pacman</h1>
+        <button id="pause-play">||</button>
+        <h3 class="score-h3">Score: <span id="score">0</span></h3>
+        <h3 class="high-score-h3">High Score: <span id="high-score">null</span></h3>
+        <div class="grid">
+            <div id="game-result-text"></div>
+        </div>
+        <script type="module" src="./index.js"></script>
+    </body>
+</html>

@@ -1,0 +1,359 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+
+body 
+{
+    font-family: "Roboto Mono", monospace;
+    background: #222;
+    color: #b6b6b6;
+    text-align: center;
+}
+
+h1
+{
+    font-size: 3.5rem;
+    font-weight: 200;
+    margin-bottom: 0.1em;
+    color: #cfcf2e;
+}
+
+h3 
+{
+    font-size: 1.25rem;
+    margin-bottom: 1em;
+    display: inline-block;
+}
+
+li 
+{
+    text-align: left;
+    font-size: 0.85rem;
+}
+
+ul 
+{
+    margin-bottom: 0.5em;
+}
+
+#purple-text 
+{
+    color: #8154aa;
+}
+
+#lose-text 
+{
+    color: salmon;
+}
+
+#win-text 
+{
+    color: yellowgreen;
+}
+  
+#pacdots-text 
+{
+    color: #469746;
+}
+  
+#power-pellet-text 
+{
+    color: crimson;
+}
+  
+#yellow-text 
+{
+    color: #cfcf2e;
+}
+
+.overlay 
+{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+}
+
+.modal 
+{
+    background-color: #152525;
+    color: white;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 3em;
+    height: 75vh;
+    border-radius: 8px;
+    box-shadow: 0px 0px 19px 3px rgba(0, 0, 0, 0.68);
+    -webkit-box-shadow: 0px 0px 19px 3px rgba(0, 0, 0, 0.68);
+    -moz-box-shadow: 0px 0px 19px 3px rgba(0, 0, 0, 0.68);
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.modal > .upper-part > p 
+{
+    text-align: left;
+    font-size: 0.85rem;
+}
+
+.modal > .upper-part > h2 
+{
+    font-size: 2.5rem;
+    margin-bottom: 0.2em;
+}
+
+.modal > .upper-part > h2 > #pacman-title 
+{
+    color: #cfcf2e;
+}
+
+.lower-part 
+{
+    width: 50%;
+    margin: 0 auto;
+}
+
+input,
+.btn 
+{
+  width: 100%;
+  border-radius: 7px;
+  font-family: inherit;
+  text-align: center;
+}
+
+input 
+{
+    padding: 0.7em 0;
+    font-size: 1rem;
+    background: inherit;
+    color: #cfcf2e;
+    border: 1px solid white;
+    margin-bottom: 0.8em;
+    transition: all 0.3s;
+    outline: none;
+}
+
+input::placeholder 
+{
+    color: rgb(129, 129, 129);
+}
+
+input:focus 
+{
+    background: #090f0f;
+    border: 1px solid #cfcf2e;
+}
+
+.btn 
+{
+    display: inline-block;
+    border: none;
+    padding: 0.5em 1em;
+    background: #cfcf2e;
+    color: #222;
+    font-weight: 700;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s;
+    outline: none;
+}
+
+.btn:hover,
+.btn:focus 
+{
+  color: #cfcf2e;
+  background: rgb(50, 50, 50);
+}
+
+#clear-ls 
+{
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+.lower-part 
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#modal-high-score 
+{
+    color: #cfcf2e;
+    font-size: 1.2rem;
+}
+
+#warning-text 
+{
+    display: none;
+    color: salmon;
+    font-size: 0.9rem;
+    margin-bottom: 0.8em;
+}
+
+#pause-play 
+{
+    display: block;
+    margin: 0 auto 0.75em;
+    border: none;
+    padding: 0.5em 6.5em;
+    background: #cfcf2e;
+    color: #222;
+    font-weight: 400;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    border-radius: 7px;
+    cursor: pointer;
+    transition: all 0.3s;
+    outline: none;
+}
+
+#pause-play:hover,
+#pause-play:focus 
+{
+  color: #cfcf2e;
+  background: rgb(50, 50, 50);
+}
+
+.high-score-h3 
+{
+  margin-left: 1.5em;
+}
+
+#score 
+{
+  font-weight: 200;
+}
+
+#high-score 
+{
+  font-weight: 200;
+}
+
+.grid 
+{
+    margin: 0 auto;
+    width: 420px;
+    height: 420px;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.grid > div 
+{
+    height: 15px;
+    width: 15px;
+}
+  
+.pacdot 
+{
+    background: #469746;
+    border: 4px solid #222;
+    box-sizing: border-box;
+}
+
+.wall 
+{
+    background: #3d6668;
+}
+  
+.power-pellet 
+{
+    background: crimson;
+    border: 2px solid #222;
+    border-radius: 50%;
+    box-sizing: border-box;
+}
+
+.ghost-lair 
+{
+    background: rgba(211, 33, 128, 0.3);
+}
+  
+.pacman
+{
+    background: #cfcf2e;
+    border: 1px solid #222;
+    border-radius: 50%;
+    box-sizing: border-box;
+}
+
+#game-result-text 
+{
+    display: none;
+    position: absolute;
+    background: rgba(34, 34, 34, 0.7);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 4rem;
+    text-align: center;
+    padding: 3.5em;
+}
+
+.ghost 
+{
+    border: 0.5px solid #222;
+    box-sizing: border-box;
+    border-radius: 0%;
+}
+  
+.blinky 
+{
+    background: #b64848;
+}
+  
+.pinky 
+{
+    background: #cf70a0;
+}
+  
+.inky 
+{
+    background: #75ceb0;
+}
+  
+.clyde 
+{
+    background: #cc8f45;
+}
+  
+.scared-ghost 
+{
+    background: #8154aa;
+}
+
+#game-over 
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: salmon;
+    font-weight: 400;
+}
+  
+#game-won 
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: yellowgreen;
+    font-weight: 400;
+}
